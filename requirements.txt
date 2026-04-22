@@ -1,0 +1,10 @@
+
+```text
+torch
+torchvision
+scikit-learn
+umap-learn
+matplotlib
+pandas
+numpy
+hdbscan
