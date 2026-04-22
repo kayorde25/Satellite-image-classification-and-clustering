@@ -1,42 +1,38 @@
 # Satellite Image Embedding Benchmarking and Clustering
 
-This project evaluates pretrained vision models on satellite imagery by extracting image embeddings, reducing dimensionality, clustering tiles, and comparing cluster quality across methods. The goal is to move beyond simple classification and toward a reproducible pipeline for embedding-based search, clustering, and Earth observation analysis.
+This project explores how pretrained computer vision models can be used to extract embeddings from satellite imagery and group similar image tiles using unsupervised learning.
 
-## Key Features
-- Pretrained embedding extraction from satellite images
-- Dimensionality reduction with PCA and UMAP
-- Clustering with KMeans and HDBSCAN
-- Quantitative evaluation with ARI, NMI, and silhouette score
-- Qualitative inspection of clusters
-- Reproducible notebook and script-based workflow
+The goal is to move beyond simple classification and build a reproducible baseline pipeline for:
 
-- Satellite-image-classification-and-clustering/
-│
+- embedding extraction
+- dimensionality reduction
+- clustering
+- evaluation
+- qualitative inspection
+
+## Dataset
+This project uses the EuroSAT dataset, derived from Sentinel-2 satellite imagery.
+
+## Methods
+- Pretrained ResNet50 for embedding extraction
+- PCA for dimensionality reduction
+- KMeans and HDBSCAN for clustering
+- UMAP for 2D visualization
+- ARI, NMI, and silhouette score for evaluation
+
+## Why this project matters
+Satellite imagery often contains overlapping, ambiguous, and mixed land-use patterns. Embedding-based clustering helps discover structure in the data without relying entirely on labels.
+
+## Current Benchmark
+This baseline compares:
+- ResNet50 embeddings
+- KMeans clustering
+- HDBSCAN clustering
+
+## Repository Structure
+```text
+.
 ├── README.md
 ├── requirements.txt
-├── .gitignore
-├── LICENSE
-│
-├── notebooks/
-│   ├── 01_data_exploration.ipynb
-│   ├── 02_embedding_extraction.ipynb
-│   ├── 03_clustering_kmeans_vs_hdbscan.ipynb
-│   └── 04_model_comparison.ipynb
-│
-├── src/
-│   ├── data.py
-│   ├── embed.py
-│   ├── cluster.py
-│   ├── evaluate.py
-│   ├── visualize.py
-│   └── utils.py
-│
-├── outputs/
-│   ├── figures/
-│   ├── tables/
-│   └── sample_clusters/
-│
-└── docs/
-    └── methodology.md
-
-
+├── satellite_image_clustering.ipynb
+└── outputs/
