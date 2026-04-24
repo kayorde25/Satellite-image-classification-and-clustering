@@ -15,7 +15,7 @@ This project uses the EuroSAT dataset, derived from Sentinel-2 satellite imagery
 
 ## Methods
 
-- # Model Comparison: ResNet50 vs EfficientNet-B0
+- ### Model Comparison: ResNet50 vs EfficientNet-B0
 
 To evaluate how different pretrained models perform on satellite imagery, we compare:
 
